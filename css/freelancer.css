@@ -19,10 +19,9 @@ p.small {
 a,
 a:hover,
 a:focus,
-a:active,
-a.active {
+a:active {
     outline: 0;
-    color: #DBEAF0;
+    color: #7fb196;
 }
 
 h1,
@@ -58,21 +57,21 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #4eacd0;
 }
 
 hr.star-light:after {
     color: #fff;
-    background-color: #DBEAF0;
+    background-color: #4eacd0;
 }
 
 hr.star-primary {
-    border-color: #95C2D3;
+    border-color: #4eacd0;
 }
 
 hr.star-primary:after {
-    color: #95C2D3;
-    background-color: #fff;
+    color: #fff;
+    background-color: #4eacd0;
 }
 
 .img-centered {
@@ -81,7 +80,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #000000;
     background: #ffffff;
 }
 
@@ -155,6 +154,11 @@ body {
     }
 }
 
+.col-md-4 {
+    width: 50%;
+}
+
+
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -173,9 +177,29 @@ body {
     outline: 0;
 }
 
+/*NavBar Link Hover Color*/
+.navbar .navbar-nav li a:hover,
+.navbar .navbar-brand:hover{
+    color:#f3fd7d;
+}
+
+.navbar .navbar-nav li a:focus,
+.navbar .navbar-brand:focus{
+    color:#ffffff;
+}
+
 .navbar-default,
 .navbar-inverse {
+    background-color: #95C2D3;
     border: 0;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:visited
+{
+    background-color:#4eacd0;
 }
 
 section {
@@ -187,9 +211,14 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
+section.success:nth-child(odd) {
     color: #fff;
-    background: #F388AD;
+    background: #80df99;
+}
+
+section.success:nth-child(even) {
+    color: #000;
+    background: #f3fd7d;
 }
 
 @media(max-width:767px) {
@@ -281,7 +310,7 @@ section.success {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #000;
 }
 
 .floating-label-form-group input,
@@ -326,15 +355,38 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #DBEAF0;
+    color: #000;
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #000;
+}
+
+input, textarea{
+    color: #FFF;
+}
+
+.form-control{
+    color:000
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color:#000;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#000;
+   opacity:1;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#000;
+   opacity:1;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:#000;
 }
 
 footer {
-    color: #fff;
+    color:#fff;
 }
 
 footer h3 {
@@ -370,6 +422,7 @@ footer .footer-below {
 .btn:active,
 .btn.active {
     outline: 0;
+    background-color: 
 }
 
 .scroll-top {
